@@ -1,0 +1,33 @@
+{
+	"TimeUnit": 1,
+	"Cache": {
+		"Size": 10,
+        "exp":5
+	},
+	"ServerList": [
+		{
+			"URL": "https://api.2ip.ua/geo.json?ip=%s",
+			"freq":4,
+			"codeField":"country_code",
+			"nameField":"country"
+		},
+		{
+			"URL": "http://api.ipstack.com/%s?access_key=9301ee97e6491439cfd9ce65f37dd3ff&fields=country_name,country_code",
+			"freq":13,
+			"codeField":"country_code",
+			"nameField":"country_name"
+		},
+		{
+			"URL": "http://api.sypexgeo.net/json/%s",
+			"freq":13,
+			"codeField":"country.iso",
+			"nameField":"country.name_en"
+		},
+		{
+			"URL": "http://geoip.nekudo.com/api/%s/short",
+			"freq": 500,
+			"codeField":"country.code",
+			"nameField":"country.name"
+		}
+	]
+}
